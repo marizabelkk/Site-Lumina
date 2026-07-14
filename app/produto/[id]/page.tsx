@@ -4,6 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { ProductCard } from "@/components/products/ProductCard";
 import { ProductDetailActions } from "@/components/products/ProductDetailActions";
+import { ProductInfoPanel } from "@/components/products/ProductInfoPanel";
 import { formatCurrency, getInstallmentText } from "@/lib/products";
 import {
   getFeaturedProducts,
@@ -17,8 +18,6 @@ type ProdutoPageProps = {
 };
 
 export const dynamic = "force-dynamic";
-
-const productInfoIcons = ["◎", "◇", "▣", "✓"];
 
 function DetailIcon({ name }: { name: "diamond" | "shield" | "gift" | "card" }) {
   if (name === "diamond") {
@@ -138,22 +137,7 @@ export default async function ProdutoPage({ params }: ProdutoPageProps) {
 
               <p className="product-buy-description">{product.description}</p>
 
-              <section className="product-info-panel">
-                <h2>
-                  Informações do produto
-                  <span aria-hidden="true">⌃</span>
-                </h2>
-                <ul>
-                  {productDetails.map((detail, index) => (
-                    <li key={detail}>
-                      <span aria-hidden="true">{productInfoIcons[index]}</span>
-                      <p className={detail.includes("Em estoque") ? "in-stock" : undefined}>
-                        {detail}
-                      </p>
-                    </li>
-                  ))}
-                </ul>
-              </section>
+              <ProductInfoPanel details={productDetails} />
 
               <ProductDetailActions product={product} />
             </aside>

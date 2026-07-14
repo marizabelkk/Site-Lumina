@@ -126,22 +126,28 @@ export default function CarrinhoPage() {
                 {lines.length ? (
                   lines.map((item) => (
                     <article className="cart-item" key={item.product.id}>
-                      <div
-                        className="cart-item-image"
-                        role="img"
-                        aria-label={item.product.name}
-                        style={{ backgroundImage: `url(${item.product.image})` }}
-                      />
-                      <div className="cart-item-info">
-                        <h3>{item.product.name}</h3>
-                        <p>Banho: {item.product.material ?? item.product.category}</p>
-                        <span>
-                          {item.product.available ? "✓ Em estoque" : "Indisponível"}
-                        </span>
-                      </div>
-                      <strong className="cart-item-price">
-                        {formatCurrency(item.product.price)}
-                      </strong>
+                      <Link
+                        className="cart-item-product"
+                        href={`/produto/${item.product.id}`}
+                        aria-label={`Ver detalhes de ${item.product.name}`}
+                      >
+                        <div
+                          className="cart-item-image"
+                          role="img"
+                          aria-label={item.product.name}
+                          style={{ backgroundImage: `url(${item.product.image})` }}
+                        />
+                        <div className="cart-item-info">
+                          <h3>{item.product.name}</h3>
+                          <p>Banho: {item.product.material ?? item.product.category}</p>
+                          <span>
+                            {item.product.available ? "✓ Em estoque" : "Indisponível"}
+                          </span>
+                        </div>
+                        <strong className="cart-item-price">
+                          {formatCurrency(item.product.price)}
+                        </strong>
+                      </Link>
                       <div className="quantity-control" aria-label="Quantidade">
                         <button
                           type="button"

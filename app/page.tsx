@@ -1,6 +1,7 @@
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { CategoryCard } from "@/components/products/CategoryCard";
+import { MobileCarousel } from "@/components/ui/MobileCarousel";
 import { categories } from "@/lib/categories";
 
 function InstagramIcon() {
@@ -172,11 +173,11 @@ export default function Home() {
               <h2>Encontre a semijoia perfeita</h2>
               <div className="gold-mark" />
             </div>
-            <div className="categories-grid">
+            <MobileCarousel className="categories-grid" label="categorias" tone="white">
               {categories.map((category) => (
                 <CategoryCard category={category} key={category.name} />
               ))}
-            </div>
+            </MobileCarousel>
             <a className="mobile-categories-link" href="/catalogo">
               Ver todas as categorias <span aria-hidden="true">→</span>
             </a>
@@ -216,7 +217,7 @@ export default function Home() {
               <h2>Inspirações que iluminam</h2>
               <div className="gold-mark" />
             </div>
-            <div className="instagram-grid">
+            <MobileCarousel className="instagram-grid" label="Instagram">
               {instagramImages.map((imageUrl) => (
                 <div
                   className="instagram-tile"
@@ -225,7 +226,7 @@ export default function Home() {
                   aria-hidden="true"
                 />
               ))}
-            </div>
+            </MobileCarousel>
             <a
               className="primary-button instagram-button"
               href="https://www.instagram.com/lumina_jp/"

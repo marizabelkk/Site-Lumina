@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { MobileCarousel } from "@/components/ui/MobileCarousel";
 
 const values = [
   {
@@ -205,7 +206,11 @@ export default function SobreNosPage() {
                 Ver nosso catálogo <span aria-hidden="true">→</span>
               </Link>
             </div>
-            <div className="behind-gallery">
+            <MobileCarousel
+              className="behind-gallery"
+              label="galeria sobre nós"
+              tone="white"
+            >
               {behindImages.map((image) => (
                 <div
                   className="behind-photo"
@@ -215,7 +220,7 @@ export default function SobreNosPage() {
                   style={{ backgroundImage: `url(${image.url})` }}
                 />
               ))}
-            </div>
+            </MobileCarousel>
           </div>
         </section>
 
