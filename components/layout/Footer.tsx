@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const CONTACT_EMAIL = "luminasemijoias.pb@gmail.com";
-const WHATSAPP_URL = "https://wa.me/558391737758";
+const WHATSAPP_URL = "https://wa.me/5583993274989";
 
 function FooterIcon({ name }: { name: "instagram" | "mail" | "whatsapp" }) {
   if (name === "instagram") {
@@ -86,7 +86,7 @@ export function Footer() {
             <h2>Fale conosco</h2>
             <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
               <FooterIcon name="whatsapp" />
-              <span>(83) 9173-7758</span>
+              <span>(83) 99326-4989</span>
             </a>
             <a
               href="https://www.instagram.com/lumina_jp/"

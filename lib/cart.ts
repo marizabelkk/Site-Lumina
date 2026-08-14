@@ -15,7 +15,7 @@ export type CartLine = {
 
 export const CART_STORAGE_KEY = "lumina-cart";
 export const CART_UPDATED_EVENT = "lumina-cart-updated";
-export const WHATSAPP_NUMBER = "558391737758";
+export const WHATSAPP_NUMBER = "5583993274989";
 
 function normalizeCart(items: CartItem[]) {
   return items

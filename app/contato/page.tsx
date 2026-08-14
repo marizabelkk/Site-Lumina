@@ -4,7 +4,7 @@ import { Header } from "@/components/layout/Header";
 const CONTACT_EMAIL = "luminasemijoias.pb@gmail.com";
 const INSTAGRAM_URL = "https://www.instagram.com/lumina_jp/";
 const WHATSAPP_URL =
-  "https://wa.me/558391737758?text=Ol%C3%A1!%20Quero%20falar%20com%20a%20Lumina%20Semijoias.";
+  "https://wa.me/5583993274989?text=Ol%C3%A1!%20Quero%20falar%20com%20a%20Lumina%20Semijoias.";
 const CONTACT_MAILTO = `mailto:${CONTACT_EMAIL}?subject=Contato pelo site Lumina`;
 
 const channels = [
@@ -22,7 +22,7 @@ const channels = [
     action: "Ir para o Instagram",
     icon: "instagram",
     href: INSTAGRAM_URL,
-    external: true,
+    external: true, 
   },
   {
     title: "E-mail",
