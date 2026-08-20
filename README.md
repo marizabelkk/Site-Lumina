@@ -8,7 +8,7 @@ O projeto conta com catálogo de produtos, página individual de cada peça, sac
 <img width="1904" height="1079" alt="image" src="https://github.com/user-attachments/assets/3b63e4d4-1711-4cea-8b63-e08771cc9da2" />
 
 
-🌐 **Site:** [acesse o site da Lumina Semi Joias](https://lumina-semi-joias.vercel.app/)
+🌐 **Site:** [acesse o site da Lumina Semi Joias](https://site-lumina.vercel.app/)
 
 📂 **Repositório:** [GitHub](https://github.com/marizabelkk/Site-Lumina)
 
